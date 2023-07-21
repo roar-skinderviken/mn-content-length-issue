@@ -10,14 +10,15 @@
     <parent>
         <groupId>io.micronaut.platform</groupId>
         <artifactId>micronaut-parent</artifactId>
-        <version>4.0.0</version>
+        <version>4.0.2-SNAPSHOT</version>
     </parent>
     <properties>
         <packaging>jar</packaging>
         <jdk.version>17</jdk.version>
         <release.version>17</release.version>
-        <micronaut.version>4.0.0</micronaut.version>
+        <micronaut.version>4.0.2-SNAPSHOT</micronaut.version>
         <micronaut.aot.enabled>false</micronaut.aot.enabled>
+        <micronaut-maven-plugin.version>4.0.1</micronaut-maven-plugin.version>
         <micronaut.aot.packageName>no.javatec.aot.generated</micronaut.aot.packageName>
         <micronaut.runtime>netty</micronaut.runtime>
         <exec.mainClass>no.javatec.ApplicationKt</exec.mainClass>
@@ -46,49 +47,44 @@
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-http-client</artifactId>
+            <version>${micronaut.version}</version>
         </dependency>
 
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-http-server-netty</artifactId>
-            <scope>compile</scope>
+            <version>${micronaut.version}</version>
         </dependency>
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-management</artifactId>
-            <scope>compile</scope>
+            <version>${micronaut.version}</version>
         </dependency>
         <dependency>
             <groupId>io.micronaut.kotlin</groupId>
             <artifactId>micronaut-kotlin-runtime</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micronaut.micrometer</groupId>
             <artifactId>micronaut-micrometer-core</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micronaut.micrometer</groupId>
             <artifactId>micronaut-micrometer-registry-prometheus</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micronaut.serde</groupId>
             <artifactId>micronaut-serde-jackson</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
             <version>${kotlinVersion}</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>${kotlinVersion}</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -100,6 +96,7 @@
             <artifactId>jackson-module-kotlin</artifactId>
             <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>io.kotest</groupId>
             <artifactId>kotest-assertions-core-jvm</artifactId>
@@ -126,6 +123,7 @@
             <plugin>
                 <groupId>io.micronaut.maven</groupId>
                 <artifactId>micronaut-maven-plugin</artifactId>
+                <version>${micronaut-maven-plugin.version}</version>
                 <configuration>
                     <configFile>aot-${packaging}.properties</configFile>
                 </configuration>
