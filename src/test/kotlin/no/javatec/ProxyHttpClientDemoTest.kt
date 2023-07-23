@@ -6,7 +6,7 @@ import io.kotest.core.spec.style.StringSpec
 
 @Ignored
 @MicronautTest
-class MnContentLengthIssueTest(private val application: EmbeddedApplication<*>): StringSpec({
+class ProxyHttpClientDemoTest(private val application: EmbeddedApplication<*>): StringSpec({
 
     "test the server is running" {
         assert(application.isRunning)
