@@ -10,15 +10,13 @@
     <parent>
         <groupId>io.micronaut.platform</groupId>
         <artifactId>micronaut-parent</artifactId>
-        <version>4.0.1</version>
+        <version>4.0.2</version>
     </parent>
     <properties>
         <packaging>jar</packaging>
         <jdk.version>17</jdk.version>
         <release.version>17</release.version>
 
-        <micronaut.version>4.0.2-SNAPSHOT</micronaut.version>
-        <micronaut-maven-plugin.version>4.0.1</micronaut-maven-plugin.version>
         <kotlinVersion>1.9.0</kotlinVersion>
 
         <micronaut.runtime>netty</micronaut.runtime>
@@ -74,6 +72,11 @@
             <artifactId>micronaut-serde-jackson</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.5.8</version>
+        </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
