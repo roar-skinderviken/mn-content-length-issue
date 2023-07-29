@@ -1,10 +1,8 @@
 package no.javatec
-import io.kotest.core.annotation.Ignored
+import io.kotest.core.spec.style.StringSpec
 import io.micronaut.runtime.EmbeddedApplication
 import io.micronaut.test.extensions.kotest5.annotation.MicronautTest
-import io.kotest.core.spec.style.StringSpec
 
-@Ignored
 @MicronautTest
 class ProxyHttpClientDemoTest(private val application: EmbeddedApplication<*>): StringSpec({
 
