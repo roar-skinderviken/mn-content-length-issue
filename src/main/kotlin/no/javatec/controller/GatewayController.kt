@@ -15,7 +15,7 @@ class GatewayController(
 ) : AbstractProxyGateway(
     proxyHttpClient = proxyHttpClient,
     controllerPath = GATEWAY_BASE_URL,
-    remoteHostAndPort = "localhost:8081",
+    remoteHostAndPort = "localhost:8080",
     scheme = "http"
 ) {
     /**
@@ -24,6 +24,12 @@ class GatewayController(
      * @param request [HttpRequest] instance.
      * @return [Publisher] of [MutableHttpResponse].
      */
+/*
     @Get(value = "/health/liveness")
     fun barnBvrApiGetStatus(request: HttpRequest<*>): Publisher<MutableHttpResponse<*>> = proxyRequest(request)
+*/
+
+    @Get(value = "/flux-test")
+    fun barnBvrApiGetStatus(request: HttpRequest<*>): Publisher<MutableHttpResponse<*>> = proxyRequest(request)
+
 }
