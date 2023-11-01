@@ -17,7 +17,7 @@
         <jdk.version>17</jdk.version>
         <release.version>17</release.version>
 
-        <kotlinVersion>1.9.10</kotlinVersion>
+        <kotlinVersion>1.9.20</kotlinVersion>
 
         <micronaut.runtime>netty</micronaut.runtime>
         <exec.mainClass>no.javatec.ApplicationKt</exec.mainClass>
