@@ -10,7 +10,7 @@
     <parent>
         <groupId>io.micronaut.platform</groupId>
         <artifactId>micronaut-parent</artifactId>
-        <version>4.4.1</version>
+        <version>4.4.3</version>
     </parent>
     <properties>
         <packaging>jar</packaging>
@@ -52,11 +52,20 @@
             <version>${kotlinVersion}</version>
         </dependency>
 
-        <!-- we need this for ProxyHttpClient, moved from scope=test -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-http-client-core</artifactId>
+            <version>4.5.2-SNAPSHOT-ROAR-6</version>
+        </dependency>
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-http-client</artifactId>
-            <version>${micronaut.version}</version>
+            <version>4.5.2-SNAPSHOT-ROAR-6</version>
         </dependency>
 
         <dependency>

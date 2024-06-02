@@ -1,0 +1,7 @@
+endpoints:
+  all:
+    port: 8081
+
+micronaut:
+  server:
+    port: 8080
