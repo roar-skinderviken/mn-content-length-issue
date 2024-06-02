@@ -1,0 +1,1 @@
+rootProject.name="micronaut-proxy-http-client-demo"
