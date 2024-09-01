@@ -20,7 +20,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-management")
-    implementation("io.projectreactor:reactor-core:3.6.8")
+    implementation("io.projectreactor:reactor-core:3.6.9")
     testImplementation("io.micronaut.test:micronaut-test-kotest5")
 }
 
