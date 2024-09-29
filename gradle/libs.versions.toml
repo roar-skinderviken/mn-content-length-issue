@@ -1,0 +1,10 @@
+[versions]
+micronautPlatform = "4.6.2"
+kotlin = "2.0.20"
+
+[libraries]
+# Kotlin
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+
+micronautPlatform = { group = "io.micronaut.platform", name = "micronaut-parent", version.ref = "micronautPlatform" }
